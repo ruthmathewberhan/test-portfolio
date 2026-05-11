@@ -107,27 +107,34 @@
             grid-template-rows: auto;
             gap: 24px;
         }
+        /* Dark mode transitions */
+        html.dark {
+            color-scheme: dark;
+        }
+        html, body {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
     </style>
 </head>
-<body class="bg-background font-body-md text-on-surface">
+<body class="bg-background font-body-md text-on-surface dark:bg-slate-900 dark:text-white">
 <!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+<header class="fixed top-0 w-full z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm">
 <div class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto w-full">
 <div class="flex items-center gap-3">
 <img alt="Institute Logo" class="h-10 w-auto" src="../images/logo.jpg"/>
-<a href="../../index.html" class="text-lg font-black tracking-tighter text-slate-800 hover:text-primary transition-colors">St. John Paul II TVET Institute</a>
+<a href="../../index.html" class="text-lg font-black tracking-tighter text-slate-800 dark:text-white hover:text-primary transition-colors">St. John Paul II TVET Institute</a>
 </div>
 <nav class="hidden md:flex items-center gap-8">
-<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="../../index.html">Home</a>
-<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="./programs.html">Programs</a>
-<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="./news.html">News</a>
-<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-900 border-b-2 border-red-700 pb-1 font-bold" href="./portal.html">Portal</a>
-<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="./careers.html">Careers</a>
-<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="./contact.html">Contact</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors" href="../../index.html">Home</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors" href="./programs.html">Programs</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors" href="./news.html">News</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-900 dark:text-white border-b-2 border-red-700 pb-1 font-bold" href="./portal.html">Portal</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors" href="./careers.html">Careers</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors" href="./contact.html">Contact</a>
 </nav>
 <div class="flex items-center gap-4">
-<button class="p-2 hover:bg-slate-50 rounded-md transition-colors">
-<span class="material-symbols-outlined text-slate-700">dark_mode</span>
+<button id="theme-toggle" class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md transition-colors" aria-label="Toggle dark mode">
+<span id="theme-icon" class="material-symbols-outlined text-slate-700 dark:text-slate-300">dark_mode</span>
 </button>
 <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-lg font-label-sm hover:opacity-90 active:scale-95 transition-all inline-block text-center">
                     Apply Now
@@ -387,4 +394,38 @@
 <p class="font-['Public_Sans'] text-xs leading-relaxed text-slate-400">© 2024 St. John Paul II TVET Institute. Partnering with Menschen für Menschen and Don Bosco.</p>
 </div>
 </footer>
+<!-- Dark Mode Toggle Script -->
+<script>
+        (function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            const html = document.documentElement;
+            
+            // Check for saved theme preference or system preference
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            // Apply initial theme
+            if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+                html.classList.add('dark');
+                themeIcon.textContent = 'light_mode';
+            } else {
+                html.classList.remove('dark');
+                themeIcon.textContent = 'dark_mode';
+            }
+            
+            // Toggle theme on button click
+            themeToggle.addEventListener('click', () => {
+                if (html.classList.contains('dark')) {
+                    html.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                    themeIcon.textContent = 'dark_mode';
+                } else {
+                    html.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                    themeIcon.textContent = 'light_mode';
+                }
+            });
+        })();
+    </script>
 </body></html>
