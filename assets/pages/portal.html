@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "surface-bright": "#f8f9ff",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#d6af8a",
+                    "on-secondary-container": "#710e13",
+                    "tertiary": "#452c11",
+                    "on-secondary-fixed-variant": "#872020",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-primary-fixed": "#011e2d",
+                    "outline": "#73787c",
+                    "on-surface-variant": "#42474c",
+                    "on-primary-container": "#a0bacf",
+                    "tertiary-fixed": "#ffdcbd",
+                    "surface-container-low": "#eff4ff",
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#dce9ff",
+                    "on-surface": "#0b1c30",
+                    "primary": "#1b3445",
+                    "tertiary-fixed-dim": "#e8bf99",
+                    "inverse-surface": "#213145",
+                    "inverse-on-surface": "#eaf1ff",
+                    "inverse-primary": "#b0cade",
+                    "error-container": "#ffdad6",
+                    "secondary": "#a73835",
+                    "background": "#f8f9ff",
+                    "surface-dim": "#cbdbf5",
+                    "surface-container": "#e5eeff",
+                    "secondary-fixed-dim": "#ffb3ad",
+                    "on-tertiary-fixed-variant": "#5d4124",
+                    "on-tertiary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#cbe6fb",
+                    "tertiary-container": "#5e4225",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#324b5c",
+                    "outline-variant": "#c3c7cc",
+                    "surface-tint": "#486173",
+                    "primary-fixed-dim": "#b0cade",
+                    "on-secondary-fixed": "#410004",
+                    "on-tertiary-fixed": "#2c1701",
+                    "surface": "#f8f9ff",
+                    "secondary-container": "#fd7771",
+                    "secondary-fixed": "#ffdad7",
+                    "on-background": "#0b1c30",
+                    "on-primary-fixed-variant": "#314a5b",
+                    "surface-variant": "#d3e4fe"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "sm": "12px",
+                    "xl": "80px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "md": "24px",
+                    "lg": "48px"
+            },
+            "fontFamily": {
+                    "body-md": ["Public Sans"],
+                    "label-sm": ["Public Sans"],
+                    "headline-md": ["Public Sans"],
+                    "body-lg": ["Public Sans"],
+                    "headline-lg": ["Public Sans"],
+                    "display-xl": ["Public Sans"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                    "display-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+<div class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-3">
+<img alt="Institute Logo" class="h-10 w-auto" src="../images/logo.jpg"/>
+<a href="../../index.html" class="text-lg font-black tracking-tighter text-slate-800 hover:text-primary transition-colors">St. John Paul II TVET Institute</a>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="../../index.html">Home</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="./programs.html">Programs</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="./news.html">News</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-900 border-b-2 border-red-700 pb-1 font-bold" href="./portal.html">Portal</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="./careers.html">Careers</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="./contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-50 rounded-md transition-colors">
+<span class="material-symbols-outlined text-slate-700">dark_mode</span>
+</button>
+<a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-lg font-label-sm hover:opacity-90 active:scale-95 transition-all inline-block text-center">
+                    Apply Now
+                </a>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-xl max-w-[1280px] mx-auto px-6">
+<!-- Header Section -->
+<header class="mb-lg">
+<h1 class="font-display-xl text-display-xl text-primary tracking-tight mb-xs">Student Portal</h1>
+<p class="font-body-lg text-body-lg text-outline">Welcome back, Academic Year 2024/2025.</p>
+</header>
+<!-- Bento Grid Dashboard Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Quick Login/Profile Card -->
+<div class="md:col-span-4 bg-white border border-outline-variant p-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-4 mb-md">
+<div class="w-16 h-16 rounded-full bg-surface-container overflow-hidden border-2 border-primary">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a young male student with a friendly expression in a modern campus setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6WmWwyEttJAyJyd9wfh3qLD6m9XnbLCMNvSQP8LDV9KiER__JLJtWBMhFxlvoDFIF1wJGgE7NfI-XmEuQdttKbS3-cGOYydywU4ECU3_O2P3hyAPzdBSRLVjvMWAmZxTbIz6R2zNhNIUNibNDqZdAgcn8q0GUHWTpwmdl925AxY1ZrFiPDaiwTVOOii-TQyk69ffoSxGGf2nAxGX6ev9wLZtDKrKBWMslXQewX7KCCO_EvXROgn5naOZ-daUj5fRURt4aq9JJ9sgR"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md">Samuel Tesfaye</h3>
+<p class="font-label-sm text-label-sm text-secondary">ID: TVET-2024-0892</p>
+</div>
+</div>
+<div class="space-y-sm">
+<div class="flex justify-between py-2 border-b border-surface-container">
+<span class="text-outline">Department</span>
+<span class="font-semibold">Automotive Tech</span>
+</div>
+<div class="flex justify-between py-2 border-b border-surface-container">
+<span class="text-outline">Semester</span>
+<span class="font-semibold">Year 2, Term 1</span>
+</div>
+</div>
+</div>
+<button class="mt-md w-full bg-primary text-white py-3 rounded-lg font-label-sm flex items-center justify-center gap-2 hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                    Sign Out
+                </button>
+</div>
+<!-- Announcements Carousel/Card -->
+<div class="md:col-span-8 bg-primary-container text-on-primary-container p-md rounded-xl shadow-sm relative overflow-hidden flex flex-col">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-sm">
+<span class="material-symbols-outlined text-secondary-container" data-icon="campaign" style="font-variation-settings: 'FILL' 1;">campaign</span>
+<h2 class="font-headline-md text-headline-md text-white">Latest Announcements</h2>
+</div>
+<div class="space-y-md">
+<div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10">
+<span class="text-xs font-bold uppercase tracking-widest text-secondary-container">Exam Schedule</span>
+<p class="font-body-md text-white mt-1">Final practical assessments for Automotive students begin on Nov 15th. Check your stations.</p>
+</div>
+<div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10">
+<span class="text-xs font-bold uppercase tracking-widest text-secondary-container">Workshop Safety</span>
+<p class="font-body-md text-white mt-1">New safety protocols are now active in the electrical engineering wing. Mandatory orientation on Friday.</p>
+</div>
+</div>
+</div>
+<!-- Decorative element -->
+<div class="absolute -right-16 -bottom-16 w-64 h-64 bg-secondary rounded-full opacity-20 blur-3xl"></div>
+</div>
+<!-- Course Materials Grid -->
+<div class="md:col-span-12">
+<div class="flex items-center justify-between mb-md">
+<h2 class="font-headline-lg text-headline-lg text-primary">Course Materials</h2>
+<button class="text-secondary font-label-sm flex items-center gap-1 hover:underline underline-offset-4">
+                        View All Courses <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Course Card 1 -->
+<div class="bg-white border border-outline-variant rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+<div class="h-32 bg-surface-container relative">
+<img class="w-full h-full object-cover opacity-80" data-alt="close-up of industrial machinery and mechanical engineering blueprints on a clean workshop table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT3PMZWe5mqXGdk1Zg89VQdz4tVmhLvOrYGwVu3gfQHxi_5cn-ympZw-nsMdm1TWiCyIwAF4DIBLf1LewdCOhtnFyprQEOSTsTeeRo9qfQpnbM0qlNh90BplvBgzs_JB3duALgIAYD_bmm_LtEjG2FRMfB-ZETG2dxi6J8sYAyUYZL6QQB_aZCWJo-xPBxN8oEZXWvZQHBB0JuCgJK75Ost9Tsrjb9cZ0stXQrOHjNpRZHq3eBMt6Cgc-OhaxCP7wxsJ0cczA5C-Ck"/>
+<div class="absolute inset-0 bg-gradient-to-t from-white to-transparent"></div>
+</div>
+<div class="p-md">
+<h4 class="font-headline-md text-headline-md mb-xs">Engine Diagnostics</h4>
+<p class="text-outline text-body-md mb-md">Advanced analysis of internal combustion systems.</p>
+<div class="flex gap-2">
+<button class="flex-1 py-2 bg-surface-container text-primary font-label-sm rounded-lg hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="download">download</span> PDF
+                                </button>
+<button class="flex-1 py-2 bg-secondary text-white font-label-sm rounded-lg hover:bg-on-secondary-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="play_circle">play_circle</span> Video
+                                </button>
+</div>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="bg-white border border-outline-variant rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+<div class="h-32 bg-surface-container relative">
+<img class="w-full h-full object-cover opacity-80" data-alt="professional technician working on electrical circuit boards with precision tools and focused lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb-lk9X-ttoiTpY-xcb5nrcQ8esDFSuXM1xvC9GkKF1dLBwUJLAL81FBop7w4Hdhe6VfN8aVga6Izhr_cmyYQxgBRYCuSZYpH1UyUI_9W7A0UAKTXxmLsAbEP71WQS_YCkvKV3zZbfuvRWZaowYncOj3WVBtUipW_7ovWkBQQLiMFBMjY6d05zMrt86QIzegRyHH_EN0ia7oK2FRIeuvUy3RehCrpimnpZ3IQjc4WjO9K_bVq2UnmF6F2Dcb3WfkFHZiiqivJDtJBF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-white to-transparent"></div>
+</div>
+<div class="p-md">
+<h4 class="font-headline-md text-headline-md mb-xs">Hybrid Technology</h4>
+<p class="text-outline text-body-md mb-md">Introduction to electric and hybrid propulsion.</p>
+<div class="flex gap-2">
+<button class="flex-1 py-2 bg-surface-container text-primary font-label-sm rounded-lg hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="download">download</span> PDF
+                                </button>
+<button class="flex-1 py-2 bg-secondary text-white font-label-sm rounded-lg hover:bg-on-secondary-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="play_circle">play_circle</span> Video
+                                </button>
+</div>
+</div>
+</div>
+<!-- Course Card 3 -->
+<div class="bg-white border border-outline-variant rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+<div class="h-32 bg-surface-container relative">
+<img class="w-full h-full object-cover opacity-80" data-alt="high-tech computer lab with multiple screens showing code and engineering simulations in a dim blue-tinted environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpD9VIf2HgEJ32KALkL-chYU01Hu2iSviQbljnmn448jCIL5EqVufDeXcU7yhqWXwP7pwoHVZ3GkAiWfaCPmqoFa8gxrg-cByVyLWDXOVsywhXclyILLflCsoxWhP23mEJs-5pO6laKuLrstFViM29-gQmqPdNyXmc73N1kmPpW5dsHcTE1Ea4D72rriOLBLRhXeDqkQCrZXViXh2CSU-VLA9vFes2HXwBSSi12VT2CLA48-5-sqXzrcq51aszs9EF_ITqC-gePqs6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-white to-transparent"></div>
+</div>
+<div class="p-md">
+<h4 class="font-headline-md text-headline-md mb-xs">Workshop Safety II</h4>
+<p class="text-outline text-body-md mb-md">Mandatory safety protocols for year 2 students.</p>
+<div class="flex gap-2">
+<button class="flex-1 py-2 bg-surface-container text-primary font-label-sm rounded-lg hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="download">download</span> PDF
+                                </button>
+<button class="flex-1 py-2 bg-secondary text-white font-label-sm rounded-lg hover:bg-on-secondary-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="play_circle">play_circle</span> Video
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Academic Calendar (Bento Medium) -->
+<div class="md:col-span-7 bg-white border border-outline-variant p-md rounded-xl">
+<div class="flex items-center gap-2 mb-md">
+<span class="material-symbols-outlined text-primary" data-icon="calendar_month">calendar_month</span>
+<h3 class="font-headline-md text-headline-md">Academic Calendar</h3>
+</div>
+<div class="space-y-4">
+<div class="flex gap-4 p-3 bg-surface-container-low rounded-lg border-l-4 border-primary">
+<div class="text-center min-w-[50px]">
+<span class="block text-xs font-bold uppercase text-primary">OCT</span>
+<span class="block text-xl font-bold">28</span>
+</div>
+<div>
+<p class="font-semibold">Mid-term Project Submission</p>
+<p class="text-sm text-outline">Deadline for all technical departments.</p>
+</div>
+</div>
+<div class="flex gap-4 p-3 bg-surface-container-low rounded-lg border-l-4 border-secondary">
+<div class="text-center min-w-[50px]">
+<span class="block text-xs font-bold uppercase text-secondary">NOV</span>
+<span class="block text-xl font-bold">12</span>
+</div>
+<div>
+<p class="font-semibold">Institute Cultural Day</p>
+<p class="text-sm text-outline">Main Campus Field - 09:00 AM onwards.</p>
+</div>
+</div>
+<div class="flex gap-4 p-3 bg-surface-container-low rounded-lg border-l-4 border-primary">
+<div class="text-center min-w-[50px]">
+<span class="block text-xs font-bold uppercase text-primary">DEC</span>
+<span class="block text-xl font-bold">15</span>
+</div>
+<div>
+<p class="font-semibold">Semester Break Begins</p>
+<p class="text-sm text-outline">Academic offices remain open for inquiries.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Exam Results (Bento Small/Tall) -->
+<div class="md:col-span-5 bg-white border border-outline-variant p-md rounded-xl">
+<div class="flex items-center gap-2 mb-md">
+<span class="material-symbols-outlined text-secondary" data-icon="grade">grade</span>
+<h3 class="font-headline-md text-headline-md">Recent Results</h3>
+</div>
+<div class="space-y-md">
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-sm">Thermodynamics</span>
+<span class="font-bold text-primary">84%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 84%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-sm">Fluid Mechanics</span>
+<span class="font-bold text-secondary">92%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary" style="width: 92%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-sm">Applied Mathematics</span>
+<span class="font-bold text-primary">76%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 76%;"></div>
+</div>
+</div>
+<div class="mt-md p-4 bg-primary text-white rounded-lg text-center">
+<p class="text-xs uppercase tracking-widest opacity-80 mb-1">Current GPA</p>
+<p class="text-2xl font-black">3.82</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 w-full mt-auto border-t border-slate-800">
+<div class="w-full py-16 px-8 flex flex-col md:flex-row justify-between items-start gap-12 max-w-7xl mx-auto">
+<div class="max-w-sm">
+<div class="text-white font-bold uppercase tracking-widest mb-6">St. John Paul II TVET</div>
+<p class="font-['Public_Sans'] text-xs leading-relaxed text-slate-400 mb-6">
+                    Providing specialized vocational training that empowers students with practical skills and Christian values to succeed in the modern technical world.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-white hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-white hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">video_library</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-white hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-12 text-slate-400">
+<div class="flex flex-col gap-4">
+<h5 class="text-white font-medium uppercase text-xs tracking-widest">Resources</h5>
+<a class="text-xs hover:text-red-500 transition-colors" href="./contact.html">Admissions</a>
+<a class="text-xs hover:text-red-500 transition-colors" href="./portal.html">Student Portal</a>
+<a class="text-xs hover:text-red-500 transition-colors" href="../../index.html">Alumni</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-white font-medium uppercase text-xs tracking-widest">Quick Links</h5>
+<a class="text-xs hover:text-red-500 transition-colors" href="./careers.html">Careers</a>
+<a class="text-xs hover:text-red-500 transition-colors" href="../../index.html">Privacy Policy</a>
+<a class="text-xs hover:text-red-500 transition-colors" href="./news.html">Media Kit</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-white font-medium uppercase text-xs tracking-widest">Contact</h5>
+<p class="text-xs">Main Campus, Tech Drive</p>
+<p class="text-xs">+123 456 7890</p>
+<p class="text-xs">info@sjp2-tvet.edu</p>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-slate-800 text-center">
+<p class="font-['Public_Sans'] text-xs leading-relaxed text-slate-400">© 2024 St. John Paul II TVET Institute. Partnering with Menschen für Menschen and Don Bosco.</p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "surface-bright": "#f8f9ff",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#d6af8a",
+                    "on-secondary-container": "#710e13",
+                    "tertiary": "#452c11",
+                    "on-secondary-fixed-variant": "#872020",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-primary-fixed": "#011e2d",
+                    "outline": "#73787c",
+                    "on-surface-variant": "#42474c",
+                    "on-primary-container": "#a0bacf",
+                    "tertiary-fixed": "#ffdcbd",
+                    "surface-container-low": "#eff4ff",
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#dce9ff",
+                    "on-surface": "#0b1c30",
+                    "primary": "#1b3445",
+                    "tertiary-fixed-dim": "#e8bf99",
+                    "inverse-surface": "#213145",
+                    "inverse-on-surface": "#eaf1ff",
+                    "inverse-primary": "#b0cade",
+                    "error-container": "#ffdad6",
+                    "secondary": "#a73835",
+                    "background": "#f8f9ff",
+                    "surface-dim": "#cbdbf5",
+                    "surface-container": "#e5eeff",
+                    "secondary-fixed-dim": "#ffb3ad",
+                    "on-tertiary-fixed-variant": "#5d4124",
+                    "on-tertiary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#cbe6fb",
+                    "tertiary-container": "#5e4225",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#324b5c",
+                    "outline-variant": "#c3c7cc",
+                    "surface-tint": "#486173",
+                    "primary-fixed-dim": "#b0cade",
+                    "on-secondary-fixed": "#410004",
+                    "on-tertiary-fixed": "#2c1701",
+                    "surface": "#f8f9ff",
+                    "secondary-container": "#fd7771",
+                    "secondary-fixed": "#ffdad7",
+                    "on-background": "#0b1c30",
+                    "on-primary-fixed-variant": "#314a5b",
+                    "surface-variant": "#d3e4fe"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "sm": "12px",
+                    "xl": "80px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "margin": "auto",
+                    "md": "24px",
+                    "lg": "48px"
+            },
+            "fontFamily": {
+                    "body-md": ["Public Sans"],
+                    "label-sm": ["Public Sans"],
+                    "headline-md": ["Public Sans"],
+                    "body-lg": ["Public Sans"],
+                    "headline-lg": ["Public Sans"],
+                    "display-xl": ["Public Sans"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                    "display-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto auto;
+            gap: 24px;
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+<div class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-3">
+<img alt="Institute Logo" class="h-10 w-auto" src="../images/logo.jpg"/>
+<a href="../../index.html" class="text-lg font-black tracking-tighter text-slate-800 hover:text-primary transition-colors">St. John Paul II TVET Institute</a>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="../../index.html">Home</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="./programs.html">Programs</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-900 border-b-2 border-red-700 pb-1 font-bold" href="./news.html">News</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="./portal.html">Portal</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="./careers.html">Careers</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="./contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-50 rounded-md transition-colors">
+<span class="material-symbols-outlined text-slate-700">dark_mode</span>
+</button>
+<a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-lg font-label-sm hover:opacity-90 active:scale-95 transition-all inline-block text-center">
+                    Apply Now
+                </a>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<header class="relative h-[400px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Technical students working collaboratively in a modern clean laboratory with blue and white scientific equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7fCiR0zLIKpRxAGQEATgWYUY5x1QrDMCu7hl94dcABRJLHvUVkJtvB2o5PrdJYhSrDSI6Bc_CgxM59OKt7E8wqo1cMvPaT1rbJWyJAeHzYHH8ShuA23AUT5VMLvm45WeTbHS63TIly9ALUidG8wFtZyjQR_8fghuofDj44QuC4yDreuVRW6_t79Z7fwtJ0BiSMXA6Qr5PCYtjQeK7Jbg5kvNiEOcKtsYlsu9e-MvitjxlkOI1CI1nOj0o4XvoicPsJLmC6obri7Bk"/>
+<div class="absolute inset-0 bg-primary/60 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 max-w-[1280px] mx-auto px-6 w-full">
+<span class="inline-block py-1 px-3 bg-secondary text-on-secondary font-label-sm rounded-sm mb-4">LATEST UPDATES</span>
+<h1 class="text-display-xl font-display-xl text-white mb-4">News &amp; Institute Events</h1>
+<p class="text-body-lg text-white/90 max-w-2xl">Stay informed with the latest technological breakthroughs, campus celebrations, and industrial partnerships at St. John Paul II TVET Institute.</p>
+</div>
+</header>
+<!-- Highlights Section (Bento Grid) -->
+<section class="max-w-[1280px] mx-auto px-6 py-xl">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="text-headline-lg font-headline-lg text-primary">Featured Spotlights</h2>
+<p class="text-body-md text-outline">Critical opportunities for career growth and training</p>
+</div>
+</div>
+<div class="bento-grid">
+<!-- Large Highlight: Job Fair -->
+<div class="col-span-2 row-span-2 relative group overflow-hidden rounded-xl bg-primary shadow-md">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Professional handshake at a career fair with corporate booths and networking professionals in background blur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvMGIvtiv6ee7gCW72rB_2ZGDcwUgRQx_4rmd5cvyDL6Elte7KpBzvpfzyoYNlBD_EZB1AujY_LdknWBR-R_OOxN6EX4lSxy44nU6ekd2V-H9Thaq-Owxv6hliGZPUpx_kuEBGTiMO2wGl9hjgwih5i7zj6E5x7sUvB7aKQFQhHUiE_c5rJzHUSQ4px6zkA6lZKEclCcMDmqDpcCV15csHnrL9xnaYougZ7t700a2wOispmV92uB-nssf1G0w4QGGDPyO4JaU21Ea5"/>
+<div class="relative z-10 p-8 h-full flex flex-col justify-end">
+<div class="flex items-center gap-2 text-secondary mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">campaign</span>
+<span class="font-label-sm uppercase tracking-wider">Major Event</span>
+</div>
+<h3 class="text-headline-lg text-white mb-4">Annual Industrial Job Fair 2024</h3>
+<p class="text-white/80 mb-6 font-body-md">Connect with over 50 leading technical firms and engineering companies. On-site interviews and career counseling available for all graduating students.</p>
+<div class="flex items-center gap-4">
+<button class="bg-secondary text-white px-6 py-3 rounded font-label-sm hover:bg-on-secondary-container transition-colors">Register Now</button>
+<span class="text-white font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_today</span> Oct 15-16
+                            </span>
+</div>
+</div>
+</div>
+<!-- Training Highlight -->
+<div class="col-span-2 bg-surface-container-high rounded-xl p-8 flex flex-col md:flex-row gap-6 shadow-sm border border-outline-variant">
+<div class="flex-1">
+<span class="text-secondary font-label-sm uppercase mb-2 block">New Program</span>
+<h3 class="text-headline-md text-primary mb-3">TVET Graduated Training</h3>
+<p class="text-body-md text-on-surface-variant mb-4">Advanced certification modules for alumni focusing on Automation and AI in manufacturing.</p>
+<a class="text-primary font-label-sm flex items-center gap-2 hover:translate-x-1 transition-transform" href="#">
+                            Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="w-full md:w-48 h-32 md:h-full rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up of mechanical engineer working on sophisticated robotic arm in high-tech manufacturing facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCISDaR4SQnON5HjcN3wiE-u_x_1pIvcvs4q_6aBvGO96WWHN2HkLXAWJ6TgciTkAIIzlbhgd-zqckCpn3eccfB1v4zllKwFhisUXHfgjkFhVaGOIsrcV_kjNNWwhYNh_SDBMFC7rfqNXkuyjvlVoAP9tJHexm6QWOgpKeqH4XTepM3V-BP7pQpTh8Sbqku_g5T_1478dkRzkJ3EvEdEnW36eEd-9CLbQ3V3NcAklRFtuXHyBC3pc412G6z1pV6b7hhmEEQzio__UWO"/>
+</div>
+</div>
+<!-- Small Info Card 1 -->
+<div class="col-span-1 bg-white border border-outline-variant rounded-xl p-6 shadow-sm flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-secondary text-3xl mb-4">handshake</span>
+<h4 class="text-headline-md text-primary text-lg mb-2">Menschen für Menschen</h4>
+<p class="text-body-md text-sm text-outline">Renewed partnership for technical equipment upgrades.</p>
+</div>
+<span class="text-xs text-outline mt-4 italic">Updated 2 days ago</span>
+</div>
+<!-- Small Info Card 2 -->
+<div class="col-span-1 bg-white border border-outline-variant rounded-xl p-6 shadow-sm flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-secondary text-3xl mb-4">school</span>
+<h4 class="text-headline-md text-primary text-lg mb-2">Graduation 2024</h4>
+<p class="text-body-md text-sm text-outline">Celebrating the 15th commencement ceremony.</p>
+</div>
+<span class="text-xs text-outline mt-4 italic">Coming in November</span>
+</div>
+</div>
+</section>
+<!-- News Grid & Academic Calendar Section -->
+<section class="bg-slate-50 border-y border-slate-200 py-xl">
+<div class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- News Feed -->
+<div class="lg:col-span-2">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-headline-lg font-headline-lg text-primary">Recent News</h2>
+<button class="text-primary font-label-sm hover:underline">View All Articles</button>
+</div>
+<div class="space-y-8">
+<!-- News Item 1 -->
+<article class="flex flex-col md:flex-row gap-6 bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+<div class="md:w-64 h-48 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Group of diverse students presenting a technical project in a brightly lit modern auditorium" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHbQGpjgMfLYG8EGVxwPwynrbGK-Peel0MWlUOXlPjfRZCmAiSrpwEX3GDDVE1Arf-fFDTeuhwX3D-HIj7DUl0oAParlT0iFg-Bz1898nBfzk7mGads3IXWF2NMGRzISzqLOJqHCh2kwh6SUwC7R5dTllyxqRN0IeMZIbq3THS2a6p09hjI9qu3vsu_gjuIWWrEWidwnMLLhySK1kmq5Wzn0BUYmNf9ngwP1HtkVfTEkQ4K2_AebxPjpkUFQgf1pre5883G4j2aQGK"/>
+</div>
+<div class="flex flex-col justify-center">
+<div class="flex gap-4 text-xs text-outline mb-2">
+<span>SEPTEMBER 28, 2024</span>
+<span class="text-secondary font-bold">CAMPUS LIFE</span>
+</div>
+<h3 class="text-headline-md text-xl text-primary mb-2 group-hover:text-secondary transition-colors">Students Win National TVET Skills Competition</h3>
+<p class="text-body-md text-on-surface-variant line-clamp-2">Our Electrical Engineering department took home the first prize for the sustainable energy solution project at the annual Skills Expo.</p>
+<a class="mt-4 font-label-sm text-primary flex items-center gap-1" href="#">Read Full Story <span class="material-symbols-outlined text-xs">open_in_new</span></a>
+</div>
+</article>
+<!-- News Item 2 -->
+<article class="flex flex-col md:flex-row gap-6 bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+<div class="md:w-64 h-48 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close up of high precision industrial machinery and digital interface in a technical workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVmTIGfhDeneeFSy58QBb30gMQsHUhfOe5nWbRwg696Hru6QBRJvY64DgrtRM_HgVEfUpb0Yr55Mp9PnbtSUKP_Fgx9kfCZm0eLzAZHKhXXBqyu3EWcBqM43XgbpoBVoh3Gx__BhiWoN2mBzpVUk-6U163Oo4_ORrq0Bb51yvowEb1Z-rjq8N7X6EDzPbqhi6Phs4iJ_0P9ybNr1Gd4FuXJZPvT_2py2qWU7wDg4IFwfILlVUeif5mOeYUh_KowiEsgOloa6DYPeaq"/>
+</div>
+<div class="flex flex-col justify-center">
+<div class="flex gap-4 text-xs text-outline mb-2">
+<span>SEPTEMBER 24, 2024</span>
+<span class="text-secondary font-bold">ACADEMICS</span>
+</div>
+<h3 class="text-headline-md text-xl text-primary mb-2 group-hover:text-secondary transition-colors">New CNC Machining Lab Officially Opens</h3>
+<p class="text-body-md text-on-surface-variant line-clamp-2">The state-of-the-art facility will provide students with hands-on experience using industry-standard equipment.</p>
+<a class="mt-4 font-label-sm text-primary flex items-center gap-1" href="#">Read Full Story <span class="material-symbols-outlined text-xs">open_in_new</span></a>
+</div>
+</article>
+<!-- News Item 3 -->
+<article class="flex flex-col md:flex-row gap-6 bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+<div class="md:w-64 h-48 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Modern library interior with clean architectural lines and students studying quietly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1HKxXPgAKXnjvAXM5QRO2SHpw4UdUb_wNs6ctuBNWs6tpLuUbujns6tOFGrByLFHkIUqdI3OoSKIyCfeivPkxqfy2-4sILB1CA94VaS4fSuJBtTkaC_Muvm08fInBpyy1qEVcnzo1XAjFiucQhSZ6s7ZM8wNE3BmCLtys8jlyHaZ3gWUDUifLFPDFw7n2RB1qmzPHDOCH1DBaypych7XLmifl_7CaRKDxwhOA5EldXgaNsefuXAzOOQP7z5Q2t_KicDZjhS_TzSan"/>
+</div>
+<div class="flex flex-col justify-center">
+<div class="flex gap-4 text-xs text-outline mb-2">
+<span>SEPTEMBER 12, 2024</span>
+<span class="text-secondary font-bold">RESOURCES</span>
+</div>
+<h3 class="text-headline-md text-xl text-primary mb-2 group-hover:text-secondary transition-colors">Digital Library Resources Now Available Remotely</h3>
+<p class="text-body-md text-on-surface-variant line-clamp-2">Students can now access over 10,000 technical journals and e-books from the comfort of their homes.</p>
+<a class="mt-4 font-label-sm text-primary flex items-center gap-1" href="#">Read Full Story <span class="material-symbols-outlined text-xs">open_in_new</span></a>
+</div>
+</article>
+</div>
+</div>
+<!-- Academic Calendar Sidebar -->
+<div class="lg:col-span-1">
+<div class="bg-primary-container rounded-xl p-8 sticky top-28 shadow-lg">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-on-primary-container text-3xl">calendar_month</span>
+<h2 class="text-headline-md text-on-primary-container">Academic Calendar</h2>
+</div>
+<div class="space-y-6">
+<!-- Calendar Item -->
+<div class="flex gap-4 group">
+<div class="bg-white rounded p-2 text-center w-14 shrink-0 shadow-sm">
+<span class="block text-xs font-bold text-secondary uppercase">Oct</span>
+<span class="block text-xl font-black text-primary">02</span>
+</div>
+<div>
+<h4 class="text-white font-semibold text-body-md">Mid-Term Examinations</h4>
+<p class="text-on-primary-container text-xs">All Departments • Full Week</p>
+</div>
+</div>
+<!-- Calendar Item -->
+<div class="flex gap-4 group">
+<div class="bg-white rounded p-2 text-center w-14 shrink-0 shadow-sm">
+<span class="block text-xs font-bold text-secondary uppercase">Oct</span>
+<span class="block text-xl font-black text-primary">15</span>
+</div>
+<div>
+<h4 class="text-white font-semibold text-body-md">Industrial Job Fair</h4>
+<p class="text-on-primary-container text-xs">Main Plaza • 9:00 AM</p>
+</div>
+</div>
+<!-- Calendar Item -->
+<div class="flex gap-4 group">
+<div class="bg-white rounded p-2 text-center w-14 shrink-0 shadow-sm">
+<span class="block text-xs font-bold text-secondary uppercase">Nov</span>
+<span class="block text-xl font-black text-primary">10</span>
+</div>
+<div>
+<h4 class="text-white font-semibold text-body-md">Annual Convocation</h4>
+<p class="text-on-primary-container text-xs">St. Peter’s Hall • 2:00 PM</p>
+</div>
+</div>
+<!-- Calendar Item -->
+<div class="flex gap-4 group">
+<div class="bg-white rounded p-2 text-center w-14 shrink-0 shadow-sm">
+<span class="block text-xs font-bold text-secondary uppercase">Dec</span>
+<span class="block text-xl font-black text-primary">15</span>
+</div>
+<div>
+<h4 class="text-white font-semibold text-body-md">Winter Semester End</h4>
+<p class="text-on-primary-container text-xs">Campus Wide</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 py-3 border border-white/30 text-white rounded font-label-sm hover:bg-white/10 transition-colors">
+                            Download Full PDF Calendar
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Sign-up CTA -->
+<section class="max-w-[1280px] mx-auto px-6 py-xl">
+<div class="bg-secondary/5 rounded-2xl p-12 flex flex-col md:flex-row items-center justify-between border border-secondary/10">
+<div class="mb-8 md:mb-0 md:mr-12">
+<h2 class="text-headline-lg text-primary mb-4">Never Miss an Update</h2>
+<p class="text-body-lg text-on-surface-variant">Get the latest news and event notifications delivered straight to your inbox.</p>
+</div>
+<div class="w-full max-w-md flex flex-col sm:flex-row gap-4">
+<input class="flex-1 bg-white border border-outline-variant rounded px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Enter your email" type="email"/>
+<button class="bg-primary text-on-primary px-8 py-3 rounded font-label-sm active:scale-95 transition-transform shrink-0">Subscribe</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 w-full mt-auto border-t border-slate-800">
+<div class="w-full py-16 px-8 flex flex-col md:flex-row justify-between items-start gap-12 max-w-7xl mx-auto">
+<div class="max-w-sm">
+<div class="text-white font-bold uppercase tracking-widest mb-6">St. John Paul II TVET</div>
+<p class="font-['Public_Sans'] text-xs leading-relaxed text-slate-400 mb-6">
+                    Providing specialized vocational training that empowers students with practical skills and Christian values to succeed in the modern technical world.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-white hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-white hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">video_library</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-white hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-12 text-slate-400">
+<div class="flex flex-col gap-4">
+<h5 class="text-white font-medium uppercase text-xs tracking-widest">Resources</h5>
+<a class="text-xs hover:text-red-500 transition-colors" href="./contact.html">Admissions</a>
+<a class="text-xs hover:text-red-500 transition-colors" href="./portal.html">Student Portal</a>
+<a class="text-xs hover:text-red-500 transition-colors" href="../../index.html">Alumni</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-white font-medium uppercase text-xs tracking-widest">Quick Links</h5>
+<a class="text-xs hover:text-red-500 transition-colors" href="./careers.html">Careers</a>
+<a class="text-xs hover:text-red-500 transition-colors" href="../../index.html">Privacy Policy</a>
+<a class="text-xs hover:text-red-500 transition-colors" href="./news.html">Media Kit</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-white font-medium uppercase text-xs tracking-widest">Contact</h5>
+<p class="text-xs">Main Campus, Tech Drive</p>
+<p class="text-xs">+123 456 7890</p>
+<p class="text-xs">info@sjp2-tvet.edu</p>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-slate-800 text-center">
+<p class="font-['Public_Sans'] text-xs leading-relaxed text-slate-400">© 2024 St. John Paul II TVET Institute. Partnering with Menschen für Menschen and Don Bosco.</p>
+</div>
+</footer>
+</body></html>

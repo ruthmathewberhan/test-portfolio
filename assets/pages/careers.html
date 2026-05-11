@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Careers | St. John Paul II TVET Institute</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "surface-bright": "#f8f9ff",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#d6af8a",
+                    "on-secondary-container": "#710e13",
+                    "tertiary": "#452c11",
+                    "on-secondary-fixed-variant": "#872020",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-primary-fixed": "#011e2d",
+                    "outline": "#73787c",
+                    "on-surface-variant": "#42474c",
+                    "on-primary-container": "#a0bacf",
+                    "tertiary-fixed": "#ffdcbd",
+                    "surface-container-low": "#eff4ff",
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#dce9ff",
+                    "on-surface": "#0b1c30",
+                    "primary": "#1b3445",
+                    "tertiary-fixed-dim": "#e8bf99",
+                    "inverse-surface": "#213145",
+                    "inverse-on-surface": "#eaf1ff",
+                    "inverse-primary": "#b0cade",
+                    "error-container": "#ffdad6",
+                    "secondary": "#a73835",
+                    "background": "#f8f9ff",
+                    "surface-dim": "#cbdbf5",
+                    "surface-container": "#e5eeff",
+                    "secondary-fixed-dim": "#ffb3ad",
+                    "on-tertiary-fixed-variant": "#5d4124",
+                    "on-tertiary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#cbe6fb",
+                    "tertiary-container": "#5e4225",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#324b5c",
+                    "outline-variant": "#c3c7cc",
+                    "surface-tint": "#486173",
+                    "primary-fixed-dim": "#b0cade",
+                    "on-secondary-fixed": "#410004",
+                    "on-tertiary-fixed": "#2c1701",
+                    "surface": "#f8f9ff",
+                    "secondary-container": "#fd7771",
+                    "secondary-fixed": "#ffdad7",
+                    "on-background": "#0b1c30",
+                    "on-primary-fixed-variant": "#314a5b",
+                    "surface-variant": "#d3e4fe"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "sm": "12px",
+                    "xl": "80px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "margin": "auto",
+                    "md": "24px",
+                    "lg": "48px"
+            },
+            "fontFamily": {
+                    "body-md": ["Public Sans"],
+                    "label-sm": ["Public Sans"],
+                    "headline-md": ["Public Sans"],
+                    "body-lg": ["Public Sans"],
+                    "headline-lg": ["Public Sans"],
+                    "display-xl": ["Public Sans"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                    "display-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            vertical-align: middle;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(180px, auto);
+            gap: 24px;
+        }
+        .hero-pattern {
+            background-color: #f8f9ff;
+            background-image: radial-gradient(#1b3445 0.5px, transparent 0.5px), radial-gradient(#1b3445 0.5px, #f8f9ff 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+<div class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-3">
+<img alt="Institute Logo" class="h-10 w-auto" src="../images/logo.jpg"/>
+<a href="../../index.html" class="text-lg font-black tracking-tighter text-slate-800 hover:text-primary transition-colors">St. John Paul II TVET Institute</a>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="../../index.html">Home</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="./programs.html">Programs</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="./news.html">News</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="./portal.html">Portal</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-900 border-b-2 border-red-700 pb-1 font-bold" href="./careers.html">Careers</a>
+<a class="font-['Public_Sans'] text-sm tracking-wide text-slate-500 hover:text-slate-800 transition-colors" href="./contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-50 rounded-md transition-colors">
+<span class="material-symbols-outlined text-slate-700">dark_mode</span>
+</button>
+<a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-lg font-label-sm hover:opacity-90 active:scale-95 transition-all inline-block text-center">
+                    Apply Now
+                </a>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative bg-primary text-white py-xl overflow-hidden">
+<div class="absolute inset-0 hero-pattern"></div>
+<div class="max-w-[1280px] mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h1 class="font-display-xl text-display-xl mb-6">Empower the Next Generation of Technicians</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-lg">Join a community of dedicated professionals committed to technical excellence and spiritual growth. Your expertise can shape the future of TVET education.</p>
+<div class="flex gap-4">
+<a class="bg-secondary text-white px-8 py-4 rounded-lg font-label-sm hover:shadow-lg transition-all" href="#openings">View Openings</a>
+<a class="border border-white/30 hover:bg-white/10 px-8 py-4 rounded-lg font-label-sm transition-all" href="#mission">Our Mission</a>
+</div>
+</div>
+<div class="hidden md:block relative">
+<div class="aspect-square bg-surface-container rounded-full overflow-hidden border-8 border-primary-container/30">
+<img alt="Instructor mentoring student" class="w-full h-full object-cover" data-alt="Professional African male instructor in a modern workshop setting guiding a young student on technical equipment, warm indoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuxQyUaeO0my6wKjzzDQ9qhimUnw-QoH_wr0Z7npVuP_gkrG1GXO9C1bxW7LdnH4L6QA89Wl5IO_U5_gtR97SeyRfYdnVnCDwxny0dnBnZwdwOvPWCdcVa1rU_kWPIavr80q9qtFUcgc0U6hJCz7MmG1yA-VIFePD3cQOE6JaPQIVzoKAlt7Nn_1TrTP-2l_bQupRBKY5Y15oTQK6fXfTMLrKzapGnaTjsn4skfYEm4Pgyfc9h3kVnxg2yKzAqtDLHyLWOQugv61-8"/>
+</div>
+<div class="absolute -bottom-4 -left-4 bg-white p-6 rounded-xl shadow-xl text-primary max-w-xs">
+<p class="font-label-sm text-secondary mb-1">Impact Highlight</p>
+<p class="font-headline-md text-headline-md leading-tight">95% Graduate Employment Rate</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Join Us (Bento Style) -->
+<section class="py-xl bg-surface" id="mission">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="mb-lg text-center max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Why Build Your Career With Us?</h2>
+<p class="font-body-md text-body-md text-outline">We offer more than just a job; we offer a vocation to transform lives through skill-based training and values-based education.</p>
+</div>
+<div class="bento-grid">
+<div class="col-span-4 md:col-span-2 row-span-2 bg-white p-lg rounded-xl border border-slate-200 shadow-sm flex flex-col justify-end relative overflow-hidden group">
+<div class="absolute inset-0 opacity-20 group-hover:scale-105 transition-transform duration-500">
+<img alt="Collaborative environment" class="w-full h-full object-cover" data-alt="Group of diverse professional educators having a meeting in a bright modern office with glass walls and technical charts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDICnfEKxQ565MRzOaCzDNQGu38UouZs7SiL_WDdrH2De_2I1xp__1HpggbM3mtRK8zw_2HQToNT-CAW0eqtbNBVXHL5v_qM-7xPKSTg8a2tzmQKzwHl9b0zQqEmi5BxVF7Vz2DJton23Al9L76iG_NYG99tbOjX9ndSSSGZ6HjQRlwGfl4wxalXzkvPCHqUrjsKDeHNpljaHNFN_UCp02gpmYGq01PHGbAUkWNUwIH3dJWKYMJR6BGxbbGX-ftDe0ok2Uq5Jwk_b1z"/>
+</div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">groups</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Vibrant Community</h3>
+<p class="font-body-md text-outline">Collaborate with a diverse team of experts who share a passion for technical excellence and Catholic values.</p>
+</div>
+</div>
+<div class="col-span-4 md:col-span-2 bg-secondary text-white p-md rounded-xl shadow-sm flex items-center gap-6">
+<span class="material-symbols-outlined text-5xl opacity-50">trending_up</span>
+<div>
+<h3 class="font-headline-md text-headline-md mb-1">Career Growth</h3>
+<p class="font-body-md opacity-90">Continuous professional development and international certification opportunities.</p>
+</div>
+</div>
+<div class="col-span-2 md:col-span-1 bg-surface-container-high p-md rounded-xl flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">school</span>
+<h4 class="font-label-sm uppercase tracking-wider text-primary">Academic Excellence</h4>
+<p class="text-sm">Access to state-of-the-art labs and modern teaching tools.</p>
+</div>
+<div class="col-span-2 md:col-span-1 bg-primary text-white p-md rounded-xl flex flex-col gap-4">
+<span class="material-symbols-outlined text-secondary-container text-3xl">volunteer_activism</span>
+<h4 class="font-label-sm uppercase tracking-wider">Mission Driven</h4>
+<p class="text-sm">Empowering marginalized youth through high-quality TVET training.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Current Openings -->
+<section class="py-xl bg-white" id="openings">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-lg gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Current Openings</h2>
+<p class="font-body-md text-outline">Join our growing faculty and staff across various technical departments.</p>
+</div>
+<div class="flex gap-2 bg-surface-container p-1 rounded-lg">
+<button class="px-4 py-2 bg-white shadow-sm rounded-md font-label-sm text-primary">Faculty</button>
+<button class="px-4 py-2 hover:bg-white/50 rounded-md font-label-sm text-outline">Administration</button>
+<button class="px-4 py-2 hover:bg-white/50 rounded-md font-label-sm text-outline">Support Staff</button>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Job Item 1 -->
+<div class="group border border-slate-200 rounded-xl p-6 hover:border-primary hover:shadow-md transition-all cursor-pointer bg-white">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex gap-4 items-start">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">computer</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Senior ICT Instructor</h3>
+<div class="flex gap-4 mt-1 text-sm text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">schedule</span> Full-time</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">location_on</span> Main Campus</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="bg-surface-container-high px-3 py-1 rounded-full text-xs font-bold text-primary">URGENT</span>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Job Item 2 -->
+<div class="group border border-slate-200 rounded-xl p-6 hover:border-primary hover:shadow-md transition-all cursor-pointer bg-white">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex gap-4 items-start">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">solar_power</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Solar Energy Technician Trainer</h3>
+<div class="flex gap-4 mt-1 text-sm text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">schedule</span> Full-time</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">location_on</span> Renewable Energy Lab</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-outline group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Job Item 3 -->
+<div class="group border border-slate-200 rounded-xl p-6 hover:border-primary hover:shadow-md transition-all cursor-pointer bg-white">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex gap-4 items-start">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">piano</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Music &amp; Performance Arts Tutor</h3>
+<div class="flex gap-4 mt-1 text-sm text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">schedule</span> Part-time</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">location_on</span> Cultural Center</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-outline group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Application Form Section -->
+<section class="py-xl bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-6 grid md:grid-cols-2 gap-xl">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Ready to Join Our Team?</h2>
+<p class="font-body-md text-outline mb-8">If you don't see a position that fits your profile but share our mission, feel free to submit a general application. We're always looking for talented individuals.</p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="bg-primary-container text-white p-3 rounded-full">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h4 class="font-label-sm text-primary">HR Email</h4>
+<p class="text-outline">hr@stjohnpaul2-tvet.edu</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-primary-container text-white p-3 rounded-full">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h4 class="font-label-sm text-primary">Recruitment Desk</h4>
+<p class="text-outline">+251 11 000 0000</p>
+</div>
+</div>
+</div>
+<div class="mt-lg p-6 bg-white rounded-xl border border-slate-200">
+<p class="font-label-sm text-secondary mb-2 italic">"Teaching at St. John Paul II is not just a profession; it's a way to give back to the community and witness true transformation in young people's lives."</p>
+<p class="font-label-sm">— Mr. Lemma, Senior Instructor</p>
+</div>
+</div>
+<div class="bg-white p-lg rounded-2xl shadow-xl border border-slate-100">
+<form class="space-y-6">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block font-label-sm text-primary mb-2">First Name</label>
+<input class="w-full border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary p-3" placeholder="John" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-primary mb-2">Last Name</label>
+<input class="w-full border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary p-3" placeholder="Doe" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-primary mb-2">Email Address</label>
+<input class="w-full border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary p-3" placeholder="john@example.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-sm text-primary mb-2">Department of Interest</label>
+<select class="w-full border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary p-3">
+<option>Information Technology</option>
+<option>Renewable Energy</option>
+<option>Music &amp; Arts</option>
+<option>Administration</option>
+<option>Other</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-primary mb-2">Upload CV/Resume (PDF)</label>
+<div class="border-2 border-dashed border-slate-200 rounded-lg p-8 text-center hover:border-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-outline mb-2">cloud_upload</span>
+<p class="text-sm text-outline">Drag and drop or click to upload</p>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-4 rounded-lg font-headline-md hover:bg-primary-container transition-colors shadow-lg" type="submit">Submit Application</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 w-full mt-auto border-t border-slate-800">
+<div class="w-full py-16 px-8 flex flex-col md:flex-row justify-between items-start gap-12 max-w-7xl mx-auto">
+<div class="max-w-sm">
+<div class="text-white font-bold uppercase tracking-widest mb-6">St. John Paul II TVET</div>
+<p class="font-['Public_Sans'] text-xs leading-relaxed text-slate-400 mb-6">
+                    Providing specialized vocational training that empowers students with practical skills and Christian values to succeed in the modern technical world.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-white hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-white hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">video_library</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-white hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-12 text-slate-400">
+<div class="flex flex-col gap-4">
+<h5 class="text-white font-medium uppercase text-xs tracking-widest">Resources</h5>
+<a class="text-xs hover:text-red-500 transition-colors" href="./contact.html">Admissions</a>
+<a class="text-xs hover:text-red-500 transition-colors" href="./portal.html">Student Portal</a>
+<a class="text-xs hover:text-red-500 transition-colors" href="../../index.html">Alumni</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-white font-medium uppercase text-xs tracking-widest">Quick Links</h5>
+<a class="text-xs hover:text-red-500 transition-colors" href="./careers.html">Careers</a>
+<a class="text-xs hover:text-red-500 transition-colors" href="../../index.html">Privacy Policy</a>
+<a class="text-xs hover:text-red-500 transition-colors" href="./news.html">Media Kit</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-white font-medium uppercase text-xs tracking-widest">Contact</h5>
+<p class="text-xs">Main Campus, Tech Drive</p>
+<p class="text-xs">+123 456 7890</p>
+<p class="text-xs">info@sjp2-tvet.edu</p>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-slate-800 text-center">
+<p class="font-['Public_Sans'] text-xs leading-relaxed text-slate-400">© 2024 St. John Paul II TVET Institute. Partnering with Menschen für Menschen and Don Bosco.</p>
+</div>
+</footer>
+</body></html>
